@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Guia completo de HTML5 com definições de todas as tags - Curso IFRS">
+    <meta name="keywords" content="HTML5, IFRS, tags HTML, o que é HTML, tutorial">
+    <meta name="author" content="Maria Sofia Soares Araújo TI1."
+    
+    <title>O que é HTML? Guia Completo com Todas as Tags - IFRS</title>
+</head>
+<body>
+
+<header>
+    <h1>HTML5 Completo - O que é HTML e Todas as Tags</h1>
+ 
+</header>
+
+<nav>
+    <p>
+        Navegação - tag nav: define menu de links<br>
+        <a href="#oque">O que é HTML</a> |
+        <a href="#estrutura">Estrutura</a> |
+        <a href="#imagens">Imagens e Links</a> |
+        <a href="#listas">Listas</a> |
+        <a href="#tabelas">Tabelas</a> |
+        <a href="#formularios">Formulários</a> |
+        <a href="#dicionario">Dicionário de Tags</a>
+    </p>
+</nav>
+
+<hr>
+
+<main>
+
+    <section id="oque">
+        <header>
+            <h2>O que é HTML?</h2>
+        </header>
+        <article>
+            <h3>Definição de HTML</h3>
+            <p><abbr title="HyperText Markup Language">HTML</abbr> significa Linguagem de Marcação de Hipertexto.</p>
+            <p>Não é linguagem de programação, é de MARCAÇÃO. Ela estrutura a página, não faz lógica.</p>
+            <p>Criada por Tim Berners-Lee em 1991. Hoje estamos no HTML5.</p>
+            <p>Exemplo de fórmula química na web: Água é H<sub>2</sub>O e carbono é CO<sub>2</sub>(usa-se a tag sub)</p>
+            <p>Exemplo de expoente: 2<sup>10</sup> = 1024(usa-se a tag sup)</p>
+        </article>
+    </section>
+
+    <aside>
+        <h4>Curiosidade - tag aside</h4>
+        <p>Aside é para conteúdo lateral, relacionado mas não principal. Ex: curiosidades, propagandas, leia também.</p>
+        <p>Você sabia que o HTML tem mais de 100 tags?</p>
+    </aside>
+<hr>
+    <div>
+        <h2 id="imagens">Paisagem - Exemplo de Imagens</h2>
+        <p>Tag div: caixa genérica sem semântica, usada só para agrupar e organizar com CSS. Diferente de section/article que tem significado.</p>
+        
+        <h3>Tag img</h3>
+        <p>img insere imagem. Atributos: src = caminho da imagem, alt = texto alternativo para acessibilidade/SEO e quando a imagem não carrega, width e height = tamanho. Se colocar só um, o outro se ajusta proporcionalmente.</p>
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Paisagem linda de montanhas com lago ao pôr do sol - exemplo de alt descritivo" width="800">
+
+        <h3>Tag picture e source</h3>
+        <p>picture: cria imagens responsivas. source: especifica múltiplas versões da imagem. media: define para qual tamanho de tela cada imagem deve aparecer. Benefício: carrega imagem leve no celular e pesada no PC.</p>
+        <picture>
+            <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300">
+            <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Paisagem responsiva de montanhas">
+        </picture>
+
+        <h3>Tag a</h3>
+        <p>a = anchor, cria hiperlink. href = destino. target=_blank abre em nova aba. title cria tooltip ao passar o mouse.</p>
+        <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" title="Documentação oficial de HTML na MDN">Documentação HTML - abre em nova aba</a></p>
+    </div>
+
+    <hr>
+
+    <section id="estrutura">
+        <h2>Tags de Estrutura Semântica - Módulo 2</h2>
+        <p><strong>header</strong>: cabeçalho da página ou de uma seção. Pode ter logo e título.</p>
+        <p><strong>nav</strong>: área de navegação, menu principal.</p>
+        <p><strong>main</strong>: conteúdo principal da página. Só pode ter um por página.</p>
+        <p><strong>section</strong>: seção temática, agrupa conteúdo relacionado com um tema. Ex: seção de notícias.</p>
+        <p><strong>article</strong>: conteúdo independente e autocontido. Ex: post de blog, notícia. Pode ser distribuído sozinho.</p>
+        <p><strong>aside</strong>: conteúdo lateral, tangencial.</p>
+        <p><strong>footer</strong>: rodapé da página ou de uma seção. Tem copyright, contato.</p>
+        <p><strong>div</strong>: divisor genérico, sem semântica. Só para agrupar.</p>
+        <p><strong>h1</strong>: heading 1, título principal, mais importante para SEO. Só 1 por página idealmente. Vai até h6.</p>
+        <p><strong>hr</strong>: horizontal rule, linha horizontal que separa conteúdos tematicamente.</p>
+        <p><strong>abbr</strong>: abreviatura. Atributo title explica o significado completo.</p>
+        <p><strong>sub</strong>: subscrito, texto embaixo. Ex: H2O</p>
+        <p><strong>sup</strong>: sobrescrito, texto em cima. Ex: 2²</p>
+        <p><strong>meta</strong>: metadados no head, informações para navegador/buscador. Ex: charset, description, keywords.</p>
+        <p><strong>title</strong>: título que aparece na aba do navegador, muito importante para SEO.</p>
+       
+    </section>
+<hr>
+    <section id="listas">
+        <h2>Tags de Listas - Módulo 4</h2>
+        <p><strong>ul</strong>: unordered list, lista não ordenada com bolinhas.</p>
+        <p><strong>ol</strong>: ordered list, lista ordenada numerada. Atributo reversed inverte a contagem para decrescente.</p>
+        <p><strong>li</strong>: list item, cada item da lista.</p>
+        <p><strong>dl</strong>: definition list, lista de definições.</p>
+        <p><strong>dt</strong>: definition term, termo que está sendo definido.</p>
+        <p><strong>dd</strong>: definition description, definição detalhada do termo.</p>
+
+        <h3>Exemplo ul</h3>
+        <ul>
+            <li>HTML estrutura</li>
+            <li>CSS estiliza</li>
+            <li>JavaScript dá interatividade</li>
+        </ul>
+
+        <h3>Exemplo ol reversed</h3>
+        <ol reversed>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript - conta 3,2,1 por causa do reversed</li>
+        </ol>
+
+        <h3>Exemplo dl</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Linguagem de marcação para estruturar páginas web</dd>
+            <dt>CSS</dt>
+            <dd>Linguagem de estilo para deixar a página bonita</dd>
+        </dl>
+    </section>
+<hr>
+    <section id="tabelas">
+        <h2>Tags de Tabela - Módulo 4</h2>
+        <p><strong>table</strong>: cria tabela.</p>
+        <p><strong>tr</strong>: table row, uma linha da tabela.</p>
+        <p><strong>th</strong>: table header, célula de cabeçalho, fica em negrito e centralizado.</p>
+        <p><strong>td</strong>: table data, célula de dados normal.</p>
+        <p><strong>cellpadding</strong>: atributo que controla espaçamento interno da célula.</p>
+        <p><strong>cellspacing</strong>: atributo que controla espaço entre as células.</p>
+
+        <table border="1" cellpadding="10" cellspacing="5">
+            <tr>
+                <th>Tag</th>
+                <th>O que é</th>
+                <th>Exemplo</th>
+            </tr>
+            <tr>
+                <td>tr</td>
+                <td>Table Row - linha</td>
+                <td>Uma linha horizontal</td>
+            </tr>
+            <tr>
+                <td>th</td>
+                <td>Table Header - cabeçalho</td>
+                <td>Título da coluna</td>
+            </tr>
+            <tr>
+                <td>td</td>
+                <td>Table Data - dado</td>
+                <td>Conte#ee95ffúdo normal</td>
+            </tr>
+        </table>
+    </section>
+<hr>
+    <section id="formularios">
+        <h2>Tags de Formulário - Módulo 4</h2>
+        <p><strong>form</strong>: envolve todos os campos de formulário.</p>
+        <p><strong>input</strong>: campo de entrada. type=text, radio, checkbox, submit etc.</p>
+        <p><strong>select</strong>: caixa de seleção dropdown. Atributo multiple permite selecionar vários segurando Ctrl.</p>
+        <p><strong>option</strong>: cada opção dentro do select. Atributo selected</p>
+   
+   
+    </body>
+</html>   
